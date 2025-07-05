@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Café Menu</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       margin: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    img.logo {
+      display: block;
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    h1 {
+      text-align: center;
     }
     h2 {
       margin-top: 40px;
+      margin-bottom: 10px;
     }
     .pdf-viewer {
       width: 100%;
       height: 600px;
       border: 1px solid #ccc;
-      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .pdf-viewer {
+        height: 400px;
+      }
+      img.logo {
+        max-width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   </style>
 </head>
 <body>
-<img src="images/logo.png" alt="Cafe Logo" style="width:150px; height:auto;">
-  <h1>Our cafe Menu</h1>
 
-  <!-- Manually add each PDF below -->
-  <h2></h2>
+  <!-- Logo -->
+  <img src="images/logo.png" alt="Cafe Logo" class="logo" />
+
+  <h1>Our Café Menu</h1>
+
+  <!-- Add your PDFs manually here -->
+  <!-- <h2>Coffee</h2> -->
   <iframe src="pdfs/menu.pdf" class="pdf-viewer"></iframe>
+
+
 </body>
 </html>
